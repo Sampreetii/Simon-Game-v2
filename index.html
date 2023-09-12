@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/stable.png">
+    <title>Simon Game 1988</title>
+
+
+</head>
+
+<body class="container">
+    <video id="background-video" autoplay loop muted poster="assets/background.jpg">
+        <source src="assets/grid3.mp4" type="video/mp4">
+    </video>
+    <div class="gametitle">
+        simon game 1988
+    </div>
+    <img class="canvas" src="assets/stable.png" id="canvas">
+    <div class="scorebox">
+        high score
+        <div class="score" id="highscore"></div>
+    </div>
+    <div class="scorebox current">
+        current score
+        <div class="score" id="currentscore"></div>
+    </div>
+    <div class="gamestatus blinker" id="pressToStart">
+        press 'simon' button to start
+    </div>
+    <div class="gamestatus" id="followInstructions">
+        follow simon's sequence in each round to gain points
+    </div>
+    <div class="side-button other-button" onclick="aboutSelected()">
+        About
+    </div>
+
+
+    <div class="buttonarea green1 btn" id="green" onclick="onClickGameButton('green')"></div>
+    <div class="buttonarea blue1 btn" id="blue" onclick="onClickGameButton('blue')"></div>
+    <div class="buttonarea red1 btn" id="red" onclick="onClickGameButton('red')"></div>
+    <div class="buttonarea yellow1 btn" id="yellow" onclick="onClickGameButton('yellow')"></div>
+    <div class="buttonarea green2 btn" id="green" onclick="onClickGameButton('green')"></div>
+    <div class="buttonarea blue2 btn" id="blue" onclick="onClickGameButton('blue')"></div>
+    <div class="buttonarea red2 btn " id="red" onclick="onClickGameButton('red')"></div>
+    <div class="buttonarea yellow2 btn" id="yellow" onclick="onClickGameButton('yellow')"></div>
+    <div class="buttonarea simon-button" onclick="onClickGameButton('simon')"></div>
+
+    <div class="overlay start" id="start">
+        <div class="start-btn" onclick="onClickAppStart()">
+            START
+        </div>
+    </div>
+    <div class="overlay" id="splashscreen">
+        <span class="typing-title">
+            > load "simon-game"
+        </span>
+    </div>
+    <div class="overlay gameover" id="gameoverScreen">
+        <div class="message" id="finalScore">
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
